@@ -1,0 +1,57 @@
+<svg width="600" height="260" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+.box { fill:#f3dede; stroke:#999; stroke-dasharray:6 4; }
+.code { font-family:monospace; font-size:22px; fill:#333; }
+.label { font-size:20px; fill:#444; font-family:sans-serif; }
+.arrow { stroke:#d33; stroke-width:2; marker-end:url(#arrow); }
+</style>
+
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+<polygon points="0 0, 6 3, 0 6" fill="#d33"/>
+</marker>
+</defs>
+
+<!-- 选择器框 -->
+<rect x="40" y="100" width="120" height="60" class="box"/>
+<text x="100" y="138" text-anchor="middle" class="code">h1</text>
+
+<!-- CSS规则框 -->
+<rect x="190" y="100" width="400" height="60" class="box"/>
+
+<!-- 拆分CSS文本 -->
+<text x="210" y="138" class="code">{</text>
+
+<text x="230" y="138" class="code">color:</text>
+<text x="295" y="138" class="code">red;</text>
+
+<text x="345" y="138" class="code">font-size:</text>
+<text x="455" y="138" class="code">14px;</text>
+
+<text x="520" y="138" class="code">}</text>
+
+<!-- 上方标签 -->
+<text x="245" y="55" class="label">属性</text>
+<line x1="255" y1="65" x2="255" y2="100" class="arrow"/>
+
+<text x="300" y="55" class="label">值</text>
+<line x1="305" y1="65" x2="305" y2="100" class="arrow"/>
+
+<text x="375" y="55" class="label">属性</text>
+<line x1="390" y1="65" x2="390" y2="100" class="arrow"/>
+
+<text x="470" y="55" class="label">值</text>
+<line x1="480" y1="65" x2="480" y2="100" class="arrow"/>
+
+<!-- 下方声明 -->
+<text x="270" y="220" class="label">声明</text>
+<line x1="275" y1="160" x2="275" y2="205" class="arrow"/>
+
+<text x="410" y="220" class="label">声明</text>
+<line x1="415" y1="160" x2="415" y2="205" class="arrow"/>
+
+<!-- 左下 -->
+<text x="70" y="220" class="label">选择器</text>
+
+</svg>

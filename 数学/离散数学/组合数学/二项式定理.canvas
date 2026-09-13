@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"2e68d3920875d73b","type":"text","text":"[[数学归纳法]]","x":-400,"y":220,"width":250,"height":60},
+		{"id":"0e4ab72e7db2f14a","type":"text","text":"## 二项式定理\n\n$$\n(x+y)^n = {n \\choose 0}x^n y^0 + {n \\choose 1}x^{n-1}y^1 + {n \\choose 2}x^{n-2}y^2 + \\cdots + {n \\choose n-1}x^1 y^{n-1} + {n \\choose n}x^0 y^n\n$$\n\n$$\n(a+b)^2=C_{n}^1a^{n-1}b^1+C_{n}^ka^{n-k}b^k\\dots+C_{n}^nb^n,n \\in N^*\n$$\n","x":-320,"y":-160,"width":640,"height":180}
+	],
+	"edges":[
+		{"id":"0f639f37f7858193","fromNode":"2e68d3920875d73b","fromSide":"top","toNode":"0e4ab72e7db2f14a","toSide":"bottom","label":"证明"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-06-21",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

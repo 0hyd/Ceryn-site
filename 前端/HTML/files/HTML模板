@@ -1,0 +1,290 @@
+<!-- 声明文档类型为 HTML5，告诉浏览器使用现代标准解析 -->
+<!DOCTYPE html>
+
+<!-- html 根元素，lang 用于SEO与无障碍（屏幕阅读器） -->
+<html lang="zh-CN">
+
+<head>
+  <!-- 指定字符编码为 UTF-8，防止中文乱码 -->
+  <meta charset="UTF-8">
+
+  <!-- 视口设置：控制移动端缩放与布局 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 页面标题（浏览器标签 + SEO重要因素） -->
+  <title>HTML 全知识点超级模板</title>
+
+  <!-- 页面描述，用于搜索引擎摘要 -->
+  <meta name="description" content="一个覆盖几乎所有HTML核心知识点的学习与模板文件">
+
+  <!-- 页面作者信息 -->
+  <meta name="author" content="Your Name">
+
+  <!-- 防止某些浏览器自动缓存（示例） -->
+  <meta http-equiv="Cache-Control" content="no-cache">
+
+  <!-- 主题色（部分浏览器地址栏颜色） -->
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- 预加载关键资源（性能优化） -->
+  <link rel="preload" href="styles.css" as="style">
+
+  <!-- 引入外部CSS样式表 -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- 内联CSS：适合小型或关键CSS（Critical CSS） -->
+  <style>
+    /* 全局盒模型设置，防止尺寸计算混乱 */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    /* 设置body基础样式 */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    /* 通用容器类 */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    /* 演示隐藏元素 */
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <!-- defer 脚本：等HTML解析完再执行（性能 + 防阻塞） -->
+  <script defer src="app.js"></script>
+
+  <!-- 内联JS：适合小工具或演示 -->
+  <script>
+    // DOMContentLoaded：确保DOM加载完成后执行
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('DOM 已加载完成');
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- header：语义化页头 -->
+  <header role="banner" class="container">
+    <!-- h1：页面主标题（SEO最重要） -->
+    <h1>HTML 全知识点超级模板</h1>
+
+    <!-- nav：导航区域 -->
+    <nav aria-label="主导航">
+      <!-- 无序列表：常见导航结构 -->
+      <ul>
+        <li><a href="#section-text">文本</a></li>
+        <li><a href="#section-form">表单</a></li>
+        <li><a href="#section-media">媒体</a></li>
+        <li><a href="#section-canvas">Canvas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main：页面主要内容 -->
+  <main role="main" class="container">
+
+    <!-- section：逻辑内容区块 -->
+    <section id="section-text">
+      <!-- h2：次级标题 -->
+      <h2>文本与语义</h2>
+
+      <!-- p：段落 -->
+      <p>
+        这是一个 <strong>加粗</strong>、
+        <em>强调</em>、
+        <mark>高亮</mark>、
+        <code>行内代码</code>、
+        <abbr title="HyperText Markup Language">HTML</abbr> 示例。
+      </p>
+
+      <!-- blockquote：引用 -->
+      <blockquote cite="https://example.com">
+        知识不是力量，运用知识才是力量。
+      </blockquote>
+
+      <!-- time：机器可读时间 -->
+      <time datetime="2026-02-04">2026年2月4日</time>
+
+      <!-- details/summary：可折叠内容 -->
+      <details>
+        <summary>点击展开更多说明</summary>
+        <p>这里可以放隐藏的补充信息。</p>
+      </details>
+    </section>
+
+    <!-- article：独立内容块（博客/帖子） -->
+    <article>
+      <h2>Article 示例</h2>
+      <p>article 表示可独立分发的内容。</p>
+    </article>
+
+    <!-- 表单区域 -->
+    <section id="section-form">
+      <h2>表单与输入</h2>
+
+      <!-- form：表单容器 -->
+      <form action="/submit" method="post" novalidate>
+
+        <!-- label + input：可访问性最佳实践 -->
+        <label for="username">用户名：</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          placeholder="请输入用户名"
+          required
+          minlength="3"
+          autocomplete="username">
+
+        <br>
+
+        <!-- 密码输入 -->
+        <label for="password">密码：</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          required
+          autocomplete="current-password">
+
+        <br>
+
+        <!-- 邮箱输入（内建校验） -->
+        <label for="email">邮箱：</label>
+        <input id="email" name="email" type="email">
+
+        <br>
+
+        <!-- 单选框 -->
+        <fieldset>
+          <legend>性别</legend>
+          <label><input type="radio" name="gender" value="m"> 男</label>
+          <label><input type="radio" name="gender" value="f"> 女</label>
+        </fieldset>
+
+        <!-- 复选框 -->
+        <label>
+          <input type="checkbox" name="agree" required>
+          我同意条款
+        </label>
+
+        <br>
+
+        <!-- 下拉选择 -->
+        <select name="country">
+          <option value="cn">中国</option>
+          <option value="us">美国</option>
+        </select>
+
+        <br>
+
+        <!-- 文本区域 -->
+        <textarea name="message" rows="4" cols="40"></textarea>
+
+        <br>
+
+        <!-- 提交按钮 -->
+        <button type="submit">提交</button>
+      </form>
+    </section>
+
+    <!-- 多媒体 -->
+    <section id="section-media">
+      <h2>多媒体</h2>
+
+      <!-- 图片（带懒加载与替代文本） -->
+      <img
+        src="image.jpg"
+        alt="示例图片"
+        loading="lazy"
+        width="300">
+
+      <!-- 音频 -->
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        浏览器不支持 audio 标签
+      </audio>
+
+      <!-- 视频 -->
+      <video controls width="320">
+        <source src="video.mp4" type="video/mp4">
+        浏览器不支持 video 标签
+      </video>
+    </section>
+
+    <!-- Canvas 与 SVG -->
+    <section id="section-canvas">
+      <h2>Canvas 与 SVG</h2>
+
+      <!-- Canvas：JS绘图 -->
+      <canvas id="myCanvas" width="300" height="150">
+        你的浏览器不支持 Canvas
+      </canvas>
+
+      <!-- SVG：矢量图 -->
+      <svg width="100" height="100" aria-label="红色圆形">
+        <circle cx="50" cy="50" r="40" fill="red"></circle>
+      </svg>
+    </section>
+
+    <!-- 数据属性：用于JS与HTML通信 -->
+    <div data-user-id="123" data-role="admin">
+      使用 data-* 存储自定义数据
+    </div>
+
+  </main>
+
+  <!-- aside：侧边栏 / 补充信息 -->
+  <aside class="container">
+    <h2>侧边信息</h2>
+    <p>放广告、相关链接、补充说明等。</p>
+  </aside>
+
+  <!-- footer：页脚 -->
+  <footer role="contentinfo" class="container">
+    <!-- address：作者或联系信息 -->
+    <address>
+      联系方式：<a href="mailto:test@example.com">test@example.com</a>
+    </address>
+
+    <!-- small：次要文本 -->
+    <small>© 2026 All rights reserved.</small>
+  </footer>
+
+  <!-- noscript：禁用JS时显示 -->
+  <noscript>
+    你的浏览器禁用了 JavaScript，部分功能不可用。
+  </noscript>
+
+  <!-- 内联JS：Canvas绘图示例 -->
+  <script>
+    // 获取 canvas 元素
+    const canvas = document.getElementById('myCanvas');
+
+    // 判断浏览器是否支持 canvas
+    if (canvas) {
+      // 获取2D绘图上下文
+      const ctx = canvas.getContext('2d');
+
+      // 设置填充颜色
+      ctx.fillStyle = 'blue';
+
+      // 绘制矩形
+      ctx.fillRect(10, 10, 100, 50);
+    }
+  </script>
+
+</body>

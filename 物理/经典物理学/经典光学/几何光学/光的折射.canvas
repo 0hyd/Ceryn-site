@@ -1,0 +1,63 @@
+{
+  "nodes": [
+    {
+      "id": "0c7b803a16da5bd1",
+      "x": -300,
+      "y": -30,
+      "width": 250,
+      "height": 60,
+      "type": "text",
+      "text": "光的折射"
+    },
+    {
+      "id": "8069892e6452b29e",
+      "x": 220,
+      "y": -75,
+      "width": 310,
+      "height": 150,
+      "type": "text",
+      "text": "[[折射率]]\n\n$n=\\frac{c}{v}\\ge1$\n\n斯涅耳定律：$n_{1}\\sin \\theta_{1}=n_{2}\\sin \\theta_{2}$"
+    },
+    {
+      "id": "e54768916a96d221",
+      "x": 660,
+      "y": -75,
+      "width": 387,
+      "height": 151,
+      "type": "text",
+      "text": "负折射率\n\n负折射率超材料或负折射率材料（NIM）是一种人造光学结构，它的折射率对于一定频率范围内的电磁波是负值"
+    }
+  ],
+  "edges": [
+    {
+      "id": "72d781efb5f67fa0",
+      "fromNode": "0c7b803a16da5bd1",
+      "fromSide": "right",
+      "toNode": "8069892e6452b29e",
+      "toSide": "left",
+      "label": "描述"
+    },
+    {
+      "id": "aa4c906541cb9411",
+      "fromNode": "8069892e6452b29e",
+      "fromSide": "right",
+      "toNode": "e54768916a96d221",
+      "toSide": "left"
+    }
+  ],
+  "metadata": {
+    "frontmatter": {
+      "date": "24-06-22",
+      "lastmod": null,
+      "tags": [],
+      "dg-publish": false,
+      "permalink": null,
+      "introduction": false,
+      "outline": false,
+      "lead-out": false,
+      "main body": false,
+      "key highlight": false
+    },
+    "version": "1.0-1.0"
+  }
+}

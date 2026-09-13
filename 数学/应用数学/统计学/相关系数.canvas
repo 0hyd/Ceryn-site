@@ -1,0 +1,17 @@
+{
+	"edges":[],
+	"metadata":{
+		"frontmatter":{
+			"date":"25-05-29",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	},
+	"nodes":[
+		{"id":"7ce1b483de57a3e9","text":"## [[皮尔逊积矩相关系数]]","type":"text","x":-125,"y":-30,"width":225,"height":90}
+	]
+}

@@ -1,0 +1,59 @@
+{
+	"edges":[
+		{"fromNode":"e0d21fce266f9f85","fromSide":"right","id":"9b74bacd588ee6c2","label":"碳骨架分类","toNode":"6a0cfb1a3de205dd","toSide":"left"},
+		{"fromNode":"6a0cfb1a3de205dd","fromSide":"right","id":"a3e3988845d170de","toNode":"b15e10920de686ce","toSide":"left"},
+		{"fromNode":"6a0cfb1a3de205dd","fromSide":"right","id":"289404f7d738b72d","toNode":"36f691e6ebe66e12","toSide":"left"},
+		{"fromNode":"b15e10920de686ce","fromSide":"right","id":"01b35a0a981cc941","toNode":"27ee4d055c8558c3","toSide":"left"},
+		{"fromNode":"b15e10920de686ce","fromSide":"right","id":"173c69396762c35c","toNode":"9dac7ad4c9c6550c","toSide":"left"},
+		{"fromNode":"36f691e6ebe66e12","fromSide":"right","id":"0f35060bcc554b36","toNode":"01e6838be635ca67","toSide":"left"},
+		{"fromNode":"36f691e6ebe66e12","fromSide":"right","id":"e00ea301691f5553","toNode":"be8cd05efe2c4713","toSide":"left"},
+		{"fromNode":"01e6838be635ca67","fromSide":"right","id":"84c1fcf62e203540","toNode":"af57b4e71e8b7c60","toSide":"left"},
+		{"fromNode":"01e6838be635ca67","fromSide":"right","id":"212cd32ed88a6b76","toNode":"5aefb828d5015c4e","toSide":"left"},
+		{"fromNode":"be8cd05efe2c4713","fromSide":"right","id":"c871cd14c0460a6b","toNode":"d16f22795ed2a02b","toSide":"left"},
+		{"fromNode":"be8cd05efe2c4713","fromSide":"right","id":"c40bf1bee8e5dd96","toNode":"4df80fb803cafad2","toSide":"left"},
+		{"fromNode":"e0d21fce266f9f85","fromSide":"right","id":"8d6a8fa8d05de8ee","label":"按官能团分类","toNode":"7fa371ed37c9c777","toSide":"left"},
+		{"fromNode":"e97310eec4cb2f85","fromSide":"bottom","id":"0bf9b634c9d8a949","label":"德国化学家弗里德里希·维勒\n推翻","toNode":"a0a1ebdb59ceacaa","toSide":"top"},
+		{"fromNode":"a0a1ebdb59ceacaa","fromSide":"bottom","id":"d29c637eb4ac7453","toNode":"b06a696568c7305c","toSide":"top"},
+		{"fromNode":"b06a696568c7305c","fromSide":"bottom","id":"88abb44ae5466859","toNode":"e0d21fce266f9f85","toSide":"top"},
+		{"fromNode":"e0d21fce266f9f85","fromSide":"left","id":"c92d337e12ba62e1","toNode":"cc4bd3ff6803f5ce","toSide":"right"},
+		{"fromNode":"e0d21fce266f9f85","fromSide":"left","id":"0017e0b2b3fbde13","toNode":"fca4a245d435de6f","toSide":"right"},
+		{"fromNode":"cc4bd3ff6803f5ce","fromSide":"left","id":"7bce0f1947799c7c","toNode":"062f595f2ad20861","toSide":"right"},
+		{"fromNode":"8d98d928b92074c7","fromSide":"top","id":"86a6517e3e8b313d","label":"发现","toNode":"062f595f2ad20861","toSide":"bottom"},
+		{"fromNode":"cc4bd3ff6803f5ce","fromSide":"left","id":"65a8daf5eec38158","toNode":"a95dec1d19664b8e","toSide":"right"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-07-08",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	},
+	"nodes":[
+		{"height":479,"id":"1e7a757c150dfb87","label":"历史","type":"group","width":291,"x":-400,"y":-240},
+		{"height":60,"id":"6a0cfb1a3de205dd","text":"有机化合物","type":"text","width":160,"x":80,"y":100},
+		{"height":60,"id":"36f691e6ebe66e12","text":"环状化合物","type":"text","width":160,"x":360,"y":198},
+		{"height":60,"id":"b15e10920de686ce","text":"链状化合物","type":"text","width":160,"x":360,"y":0},
+		{"height":60,"id":"be8cd05efe2c4713","text":"芳香族化合物","type":"text","width":168,"x":652,"y":246},
+		{"height":60,"id":"fca4a245d435de6f","text":"共价键","type":"text","width":250,"x":-764,"y":186},
+		{"height":98,"id":"e0d21fce266f9f85","text":"## [[有机化合物基础]]","type":"text","width":210,"x":-360,"y":276},
+		{"height":60,"id":"b06a696568c7305c","text":"必须含有共价键形式的碳氢键和碳碳键","type":"text","width":250,"x":-380,"y":159},
+		{"height":100,"id":"e97310eec4cb2f85","text":"[生机论](https://zh.wikipedia.org/wiki/%E7%94%9F%E6%A9%9F%E8%AB%96 \"生机论\")\n\n只有生物能合成\n","type":"text","width":223,"x":-365,"y":-200},
+		{"height":70,"id":"a0a1ebdb59ceacaa","text":"无机物合成有机物","type":"text","width":250,"x":-379,"y":42},
+		{"height":60,"id":"4df80fb803cafad2","text":"芳香烃衍生物","type":"text","width":179,"x":921,"y":318},
+		{"height":60,"id":"d16f22795ed2a02b","text":"芳香烃","type":"text","width":179,"x":921,"y":258},
+		{"height":60,"id":"5aefb828d5015c4e","text":"脂环烃衍生物","type":"text","width":188,"x":912,"y":142},
+		{"height":60,"id":"af57b4e71e8b7c60","text":"脂环烃","type":"text","width":188,"x":912,"y":82},
+		{"height":60,"id":"9dac7ad4c9c6550c","text":"脂肪烃衍生物","type":"text","width":188,"x":912,"y":0},
+		{"height":60,"id":"27ee4d055c8558c3","text":"脂肪烃","type":"text","width":124,"x":944,"y":-100},
+		{"height":60,"id":"cc4bd3ff6803f5ce","text":"### 异构现象","type":"text","width":250,"x":-764,"y":588},
+		{"height":88,"id":"a95dec1d19664b8e","text":"[同分异构 - 维基百科，自由的百科全书](https://zh.wikipedia.org/zh-cn/%E5%90%8C%E5%88%86%E7%95%B0%E6%A7%8B) #待完善 ","type":"text","width":250,"x":-1119,"y":530},
+		{"height":60,"id":"01e6838be635ca67","text":"脂环化合物","type":"text","width":148,"x":662,"y":112},
+		{"file":"化学/有机化学/files/官能团分类.pdf","height":440,"id":"7fa371ed37c9c777","subpath":"#page=1","type":"file","width":1028,"x":72,"y":440},
+		{"height":60,"id":"062f595f2ad20861","text":"同分异构体","type":"text","width":250,"x":-1119,"y":696},
+		{"height":62,"id":"8d98d928b92074c7","text":"李比希、弗里德里希·维勒","type":"text","width":294,"x":-1141,"y":869}
+	]
+}

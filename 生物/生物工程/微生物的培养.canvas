@@ -1,0 +1,47 @@
+{
+	"nodes":[
+		{"id":"9cb23db37b9b994a","type":"group","x":-980,"y":20,"width":880,"height":920,"label":"培养"},
+		{"id":"94ae4391bb0d4cb6","type":"group","x":-100,"y":20,"width":400,"height":400,"label":"微生物"},
+		{"id":"e945197f464c4167","type":"text","text":"## 微生物的培养","x":-625,"y":34,"width":250,"height":60},
+		{"id":"72bed4e2204361f3","type":"text","text":"培养基","x":-625,"y":148,"width":250,"height":57},
+		{"id":"434ac83fb720e5e7","type":"text","text":"种类","x":-960,"y":147,"width":250,"height":60},
+		{"id":"c4df86b4460f82b1","type":"text","text":"配置原则","x":-625,"y":274,"width":250,"height":60},
+		{"id":"444eaed48f926957","type":"text","text":"实现方式","x":-960,"y":420,"width":250,"height":60},
+		{"id":"3e7dce21d3cab4f2","type":"text","text":"代谢产物","x":-875,"y":684,"width":250,"height":60},
+		{"id":"f2b49116f1ee00ac","type":"text","text":"保存","x":-625,"y":822,"width":250,"height":60},
+		{"id":"8e13fe7afd2bbda9","type":"text","text":"平板划线法\n\n稀释涂布平板法","x":-960,"y":516,"width":250,"height":76},
+		{"id":"164ae146ebd79fdc","type":"text","text":"## 微生物","x":-25,"y":34,"width":250,"height":60},
+		{"id":"109cd6a87f79e4e2","type":"text","text":"接种","x":-625,"y":524,"width":250,"height":60},
+		{"id":"cb08fa240238683a","type":"text","text":"种类","x":-25,"y":148,"width":250,"height":60},
+		{"id":"f3d60fe59555edea","type":"text","text":"生存环境","x":-25,"y":274,"width":250,"height":60},
+		{"id":"c3568bb53c9df84f","type":"text","text":"无菌条件","x":-625,"y":420,"width":250,"height":60},
+		{"id":"f42c05eadfbeaefc","type":"text","text":"分离","x":-625,"y":684,"width":250,"height":60},
+		{"id":"0def61183fedc852","type":"text","text":"生长周期","x":-375,"y":684,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"2ddbc9582f262d6f","fromNode":"72bed4e2204361f3","fromSide":"bottom","toNode":"c4df86b4460f82b1","toSide":"top","label":"成分"},
+		{"id":"2bd663607cfc8030","fromNode":"72bed4e2204361f3","fromSide":"left","toNode":"434ac83fb720e5e7","toSide":"right"},
+		{"id":"8c7af284aba1dbba","fromNode":"f3d60fe59555edea","fromSide":"left","toNode":"c4df86b4460f82b1","toSide":"right"},
+		{"id":"83aa574052acd72a","fromNode":"c4df86b4460f82b1","fromSide":"bottom","toNode":"c3568bb53c9df84f","toSide":"top","label":"排除杂菌"},
+		{"id":"aa24293678c88894","fromNode":"c3568bb53c9df84f","fromSide":"bottom","toNode":"109cd6a87f79e4e2","toSide":"top"},
+		{"id":"0c18a1035d85d524","fromNode":"109cd6a87f79e4e2","fromSide":"bottom","toNode":"0def61183fedc852","toSide":"top","label":"计数"},
+		{"id":"dc4a5fb646bb5704","fromNode":"109cd6a87f79e4e2","fromSide":"bottom","toNode":"f42c05eadfbeaefc","toSide":"top"},
+		{"id":"c55359724fcf2139","fromNode":"e945197f464c4167","fromSide":"right","toNode":"164ae146ebd79fdc","toSide":"left","label":"培养对象"},
+		{"id":"472222de65f08dbb","fromNode":"e945197f464c4167","fromSide":"bottom","toNode":"72bed4e2204361f3","toSide":"top","label":"载体"},
+		{"id":"ee0762cd397ce7c9","fromNode":"c3568bb53c9df84f","fromSide":"left","toNode":"444eaed48f926957","toSide":"right"},
+		{"id":"b58ca627016ce61a","fromNode":"109cd6a87f79e4e2","fromSide":"bottom","toNode":"3e7dce21d3cab4f2","toSide":"top","label":"产生"},
+		{"id":"8139149c05cb77b0","fromNode":"f42c05eadfbeaefc","fromSide":"bottom","toNode":"f2b49116f1ee00ac","toSide":"top"},
+		{"id":"53d4ed610ba881cb","fromNode":"109cd6a87f79e4e2","fromSide":"left","toNode":"8e13fe7afd2bbda9","toSide":"right"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-05-23",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

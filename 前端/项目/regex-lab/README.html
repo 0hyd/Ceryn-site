@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>README - 澄夜的数字岛屿</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans SC:wght@400;700&amp;family=Noto Sans SC:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Ceryn"/><meta property="og:title" content="README - 澄夜的数字岛屿"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="README - 澄夜的数字岛屿"/><meta name="twitter:description" content="正则实验室 (regex-lab) 一个交互式的正则表达式测试工具，支持实时匹配、替换预览、模式收藏和拖拽调整面板。 功能清单 正则输入框（支持 g/i/m/s/u 标志位） 测试文本框 实时匹配显示（结果卡片含位置、匹配内容） 替换功能（预览 + 支持 \n \t \r 转义） 常用模式 用户收藏 拖拽调整 panel 宽度（百分比限幅） 左侧 sidebar 折叠 各模块复制按钮（正则/替换/测试文本/替换结果） 编辑模式（批量删除收藏） 主题切换（深色/浅色） 导出数据（JSON 下载） 显示正则匹配解释 高亮显示正文匹配的内容 点击卡片跳转到测试文本对于位置 常用 / 收藏可折叠 开发..."/><meta property="og:description" content="正则实验室 (regex-lab) 一个交互式的正则表达式测试工具，支持实时匹配、替换预览、模式收藏和拖拽调整面板。 功能清单 正则输入框（支持 g/i/m/s/u 标志位） 测试文本框 实时匹配显示（结果卡片含位置、匹配内容） 替换功能（预览 + 支持 \n \t \r 转义） 常用模式 用户收藏 拖拽调整 panel 宽度（百分比限幅） 左侧 sidebar 折叠 各模块复制按钮（正则/替换/测试文本/替换结果） 编辑模式（批量删除收藏） 主题切换（深色/浅色） 导出数据（JSON 下载） 显示正则匹配解释 高亮显示正文匹配的内容 点击卡片跳转到测试文本对于位置 常用 / 收藏可折叠 开发..."/><meta property="og:image:alt" content="正则实验室 (regex-lab) 一个交互式的正则表达式测试工具，支持实时匹配、替换预览、模式收藏和拖拽调整面板。 功能清单 正则输入框（支持 g/i/m/s/u 标志位） 测试文本框 实时匹配显示（结果卡片含位置、匹配内容） 替换功能（预览 + 支持 \n \t \r 转义） 常用模式 用户收藏 拖拽调整 panel 宽度（百分比限幅） 左侧 sidebar 折叠 各模块复制按钮（正则/替换/测试文本/替换结果） 编辑模式（批量删除收藏） 主题切换（深色/浅色） 导出数据（JSON 下载） 显示正则匹配解释 高亮显示正文匹配的内容 点击卡片跳转到测试文本对于位置 常用 / 收藏可折叠 开发..."/><meta property="og:image" content="https://localhost:8080/static/og-image.png"/><meta property="og:image:url" content="https://localhost:8080/static/og-image.png"/><meta name="twitter:image" content="https://localhost:8080/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="localhost:8080"/><meta property="og:url" content="https://localhost:8080/前端/项目/regex-lab/README"/><meta property="twitter:url" content="https://localhost:8080/前端/项目/regex-lab/README"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="正则实验室 (regex-lab) 一个交互式的正则表达式测试工具，支持实时匹配、替换预览、模式收藏和拖拽调整面板。 功能清单 正则输入框（支持 g/i/m/s/u 标志位） 测试文本框 实时匹配显示（结果卡片含位置、匹配内容） 替换功能（预览 + 支持 \n \t \r 转义） 常用模式 用户收藏 拖拽调整 panel 宽度（百分比限幅） 左侧 sidebar 折叠 各模块复制按钮（正则/替换/测试文本/替换结果） 编辑模式（批量删除收藏） 主题切换（深色/浅色） 导出数据（JSON 下载） 显示正则匹配解释 高亮显示正文匹配的内容 点击卡片跳转到测试文本对于位置 常用 / 收藏可折叠 开发..."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiRTpcXERvY3VtZW50c1xcV2ViXFxRdWFydHotQ2VyeW5cXHF1YXJ0ei00XFxxdWFydHpcXGNvbXBvbmVudHNcXHN0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://localhost:8080/index.xml"/></head><body data-slug="前端/项目/regex-lab/README"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Ceryn</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-599"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-599" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../前端/">前端</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../前端/项目/">项目</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../前端/项目/regex-lab/">regex lab</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>README</a></div></nav><h1 class="article-title">README</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-11T16:00:00.000Z">2026年9月12日</time><span>10分钟阅读</span></p><p class="content-meta content-stats"><span>活跃分钟 0</span><span>访问量 0</span><span>点赞量 0</span><span>点击量 0</span></p></div></div><article class="popover-hint"><h1 id="正则实验室-regex-lab">正则实验室 (regex-lab)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#正则实验室-regex-lab" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>一个交互式的正则表达式测试工具，支持实时匹配、替换预览、模式收藏和拖拽调整面板。</p>
+<hr/>
+<h2 id="功能清单">功能清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#功能清单" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled/> 正则输入框（支持 g/i/m/s/u 标志位）</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 测试文本框</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 实时匹配显示（结果卡片含位置、匹配内容）</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 替换功能（预览 + 支持 \n \t \r 转义）</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 常用模式</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 用户收藏</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 拖拽调整 panel 宽度（百分比限幅）</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 左侧 sidebar 折叠</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 各模块复制按钮（正则/替换/测试文本/替换结果）</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 编辑模式（批量删除收藏）</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 主题切换（深色/浅色）</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 导出数据（JSON 下载）</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 显示正则匹配解释</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 高亮显示正文匹配的内容</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 点击卡片跳转到测试文本对于位置</li>
+<li class="task-list-item"><input type="checkbox" checked disabled/> 常用 / 收藏可折叠</li>
+</ul>
+<hr/>
+<h3 id="开发中">开发中<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#开发中" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>换行符显示</li>
+<li>编辑功能</li>
+<li>侧边栏底部三按钮（编辑 / 主题 / 导出）</li>
+</ol>
+<hr/>
+<h3 id="待实现侧边栏底部按钮">待实现：侧边栏底部按钮<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#待实现侧边栏底部按钮" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>在 <code>#saved-sidebar</code> 底部新增 <code>#sidebar-footer</code>，放三个工具按钮。展开时横向排列，折叠时竖向排列。</p>
+<p><strong>HTML 结构：</strong></p>
+<pre><code>aside#saved-sidebar
+├── button#toggle-btn (右上角)
+├── section#saved-section (内容，折叠时隐藏)
+└── div#sidebar-footer (底部，新增)
+    ├── button#btn-edit   (编辑模式)
+    ├── button#btn-theme  (主题切换)
+    └── button#btn-export (导出数据)
+</code></pre>
+<p><strong>CSS 布局：</strong></p>
+<pre><code>展开：[编辑] [主题] [导出]     ← flex-direction: row
+折叠：[编辑] / [主题] / [导出] ← flex-direction: column
+</code></pre>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="css" data-theme="github-light github-dark"><code data-language="css" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">#sidebar-footer</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    display</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">flex</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    flex-direction</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">row</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    justify-content</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">center</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    gap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">8</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">px</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">#saved-sidebar.collapsed</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> #sidebar-footer</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    flex-direction</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">column</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<h4 id="按钮-1编辑模式">按钮 1：编辑模式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#按钮-1编辑模式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>作用：切换 <code>#saved-list.edit-mode</code>，显示卡片删除按钮</li>
+<li>切换按钮文字：<code>编辑</code> ↔ <code>完成</code></li>
+<li>只对用户收藏生效，不影响常用区</li>
+</ul>
+<h4 id="按钮-2主题切换深色浅色">按钮 2：主题切换（深色/浅色）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#按钮-2主题切换深色浅色" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>原理</strong>：给 <code>&lt;html></code> 加 <code>data-theme=&quot;light&quot;</code> 属性，CSS 变量覆盖</li>
+<li><strong>持久化</strong>：存 <code>localStorage.getItem('regexlab.theme')</code></li>
+<li><strong>图标</strong>：深色显 ☀️，浅色显 🌙</li>
+<li><strong>过渡动画</strong>：<code>body { transition: background-color 0.3s; }</code></li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="css" data-theme="github-light github-dark"><code data-language="css" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">:root</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, [</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">data-theme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;dark&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">] {</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">    --bg-primary</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">hsl</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">60</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">12</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">    --text-primary</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">#ffffff</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">data-theme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;light&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">] {</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">    --bg-primary</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">hsl</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">60</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">10</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">96</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">    --text-primary</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">#1a1a1a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<h4 id="按钮-3导出数据">按钮 3：导出数据<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#按钮-3导出数据" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>作用</strong>：下载用户收藏为 JSON 文件</li>
+<li><strong>核心 API</strong>：<code>Blob</code> + <code>URL.createObjectURL</code> + <code>&lt;a download></code></li>
+<li><strong>文件名</strong>：<code>regex-patterns-2024-01-15.json</code>（带日期）</li>
+<li><strong>格式化</strong>：<code>JSON.stringify(patterns, null, 2)</code>（2 空格缩进，可读）</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="js" data-theme="github-light github-dark"><code data-language="js" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> blob</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Blob</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">([jsonStr], {type: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'application/json'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">});</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> url</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> URL</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">createObjectURL</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(blob);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> a</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> document.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">createElement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'a'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">a.href </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> url;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">a.download </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> `regex-patterns-${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">date</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">}.json`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">a.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">click</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">URL</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">revokeObjectURL</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(url);</span></span></code></pre></figure>
+<h4 id="实现顺序">实现顺序<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#实现顺序" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ol>
+<li>加 <code>#sidebar-footer</code> HTML 结构</li>
+<li>写 CSS 布局（展开横向 / 折叠竖向）</li>
+<li>实现主题切换（CSS 变量覆盖 + localStorage）</li>
+<li>实现编辑模式（<code>classList.toggle</code> + 删除按钮显隐）</li>
+<li>实现导出（Blob + 下载链接）</li>
+</ol>
+<hr/>
+<h2 id="已知问题">已知问题<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#已知问题" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>结果卡片样式未优化</li>
+<li>变量变多，命名需要优化</li>
+<li>p, e, ietm 混用不清</li>
+</ol>
+<hr/>
+<h2 id="文件结构">文件结构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#文件结构" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><code>regex-lab/
+├── index.html
+├── README.md
+├── style/
+│   ├── base.css          — CSS 变量、全局重置、button 基础样式
+│   ├── layout.css        — workspace flex 布局、面板、分割线 ::after
+│   ├── inputs.css        — input/textarea 样式、section-header-row、错误态
+│   ├── saved.css         — 侧边栏折叠、toggle 按钮
+│   ├── editor.css        — flags 排列、editor-panel 内部 section
+│   └── result.css        — 结果区域、result-list 滚动、卡片样式
+└── script/
+    ├── storage.js         — 数据层：PRESETS 预设 + renderPresets
+    ├── matcher.js         — 运算层：buildRegExp / runMatch
+    ├── render.js          — 渲染层：renderResults / renderErrorResults
+    ├── respace.js         — 替换层：replaceText（支持转义）
+    ├── resizer.js         — 交互层：拖拽调整 editor/result 宽度
+    └── main.js            — 调度层：防抖、事件绑定、复制、折叠
+</code></pre>
+<p><strong>JS 加载顺序：</strong> <code>matcher.js</code> → <code>render.js</code> → <code>respace.js</code> → <code>resizer.js</code> → <code>main.js</code></p>
+<hr/>
+<h2 id="css-设计系统">CSS 设计系统<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#css-设计系统" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="css-变量basecss">CSS 变量（base.css）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#css-变量basecss" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>变量</th><th>值</th><th>用途</th></tr></thead><tbody><tr><td><code>--bg-primary</code></td><td><code>hsl(60, 2%, 12%)</code></td><td>页面主背景</td></tr><tr><td><code>--bg-secondary</code></td><td><code>hsl(60, 2%, 17%)</code></td><td>卡片、按钮背景</td></tr><tr><td><code>--bg-tertiary</code></td><td><code>hsl(60, 2%, 22%)</code></td><td>hover 状态</td></tr><tr><td><code>--bg-panel-darker</code></td><td><code>hsl(60, 2%, 11%)</code></td><td>sidebar / result-panel</td></tr><tr><td><code>--text-primary</code></td><td><code>#ffffff</code></td><td>主文字</td></tr><tr><td><code>--text-secondary</code></td><td><code>#c3c2b7</code></td><td>次要文字（body 默认）</td></tr><tr><td><code>--accent</code></td><td><code>#d97757</code></td><td>强调色（按钮、hover）</td></tr><tr><td><code>--resizer</code></td><td><code>#494949</code></td><td>分割线颜色</td></tr><tr><td><code>--error</code></td><td><code>rgb(205, 72, 72)</code></td><td>错误边框色</td></tr><tr><td><code>--bg-error</code></td><td><code>rgba(206, 89, 89, 0.447)</code></td><td>错误光晕</td></tr></tbody></table></div>
+<h3 id="文件职责">文件职责<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#文件职责" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文件</th><th>职责</th></tr></thead><tbody><tr><td><code>base.css</code></td><td>全局 box-sizing、CSS 变量、body 底色、button 基础</td></tr><tr><td><code>layout.css</code></td><td><code>#workspace</code> flex 三栏、三个 panel、<code>.line</code> 分割线 <code>::after</code></td></tr><tr><td><code>inputs.css</code></td><td>输入框/textarea 尺寸样式、<code>.section-header-row</code>、<code>.error</code> 错误态</td></tr><tr><td><code>saved.css</code></td><td>侧边栏宽度过渡、<code>.collapsed</code> 折叠、toggle 按钮定位</td></tr><tr><td><code>editor.css</code></td><td>flags 居中、<code>#editor-panel > section</code> flex column</td></tr><tr><td><code>result.css</code></td><td>result 两区高度分配、result-list 滚动、卡片样式</td></tr></tbody></table></div>
+<hr/>
+<h2 id="html-结构">HTML 结构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#html-结构" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><code>div#workspace (display: flex)
+├── aside#saved-sidebar (width: 20%, collapsible)
+│   ├── button#toggle-btn + span.icon
+│   └── section#saved-section
+│       ├── h2 &quot;常用&quot; + div#common-list (空)
+│       ├── h2 &quot;收藏&quot; + div#saved-list (空)
+│       └── button#save-btn
+├── div.line                      ← 侧边栏分割线 (5px, ::after 2px)
+├── main#editor-panel (flex: 1 1 0, min-width: 260px)
+│   ├── section#pattern-section
+│   │   ├── div.section-header-row > label + button#btn-copy-regex
+│   │   ├── input#pattern-input
+│   │   ├── form#flags (g/i/m/s/u checkboxes)
+│   │   └── div#pattern-error
+│   ├── section#replace-section
+│   │   ├── div.section-header-row > label + button#btn-copy-replace
+│   │   └── input#replace-input
+│   └── section#test-section (flex: 1)
+│       ├── div.section-header-row > label + button#btn-copy-test
+│       └── textarea#test-input
+├── div#resizer.line (cursor: col-resize)  ← 可拖拽分割线
+└── div#result-panel (flex: 0.6 1 0, min-width: 200px)
+    ├── section#result-section (height: 45%)
+    │   ├── div.section-header-row > label
+    │   └── div#result-content
+    │       ├── div#result-header (&quot;匹配结果 N 处&quot;)
+    │       └── div#result-list (overflow-y: auto)
+    └── section#replace-result-section (flex: 1)
+        ├── div.section-header-row > label + button#btn-copy-result
+        └── textarea#replace-preview (disabled)
+</code></pre>
+<p><strong>面板布局规则：</strong></p>
+<ul>
+<li>Desktop：横向 flex 三栏，<code>#resizer</code> 可拖拽调整 editor/result 比例</li>
+<li>saved-sidebar 默认 20%，可折叠至 35px</li>
+<li>result-panel 拖拽范围 20%–60%（百分比例）</li>
+</ul>
+<hr/>
+<h2 id="js-函数清单">JS 函数清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#js-函数清单" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="storagejs数据层">storage.js（数据层）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#storagejs数据层" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>常量/函数</th><th>说明</th></tr></thead><tbody><tr><td><code>PRESETS</code></td><td>5 个预设模式数组，含 id/name/pattern/flags/replace/test</td></tr><tr><td><code>renderPresets(PRESETS)</code></td><td>渲染”常用”卡片到 <code>#common-list</code>，使用 <code>data-id</code> + 事件委托</td></tr></tbody></table></div>
+<h3 id="matcherjs运算层--纯逻辑">matcher.js（运算层 — 纯逻辑）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#matcherjs运算层--纯逻辑" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>函数</th><th>签名</th><th>说明</th></tr></thead><tbody><tr><td><code>buildRegExp</code></td><td><code>(textPattern, formFlagsData) → {regex, error}</code></td><td>用 FormData 收集 flags，try-catch 构建 RegExp，返回 <code>{regex, error}</code> 对象</td></tr><tr><td><code>runMatch</code></td><td><code>(regex, textTest) → [{index, match, groups}]</code></td><td>matchAll（global）或 exec（非 global），返回匹配数组</td></tr></tbody></table></div>
+<h3 id="renderjs渲染层--dom-操作">render.js（渲染层 — DOM 操作）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#renderjs渲染层--dom-操作" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>函数</th><th>签名</th><th>说明</th></tr></thead><tbody><tr><td><code>render</code></td><td><code>(matchArray)</code></td><td>内部函数：清空 result-list，生成结果卡片，更新计数</td></tr><tr><td><code>renderResults</code></td><td><code>(matchArray, replacePreviewText)</code></td><td>正常渲染，移除 <code>.error</code> 类，写入 replacePreviewText</td></tr><tr><td><code>renderErrorResults</code></td><td><code>(matchArray, errorText)</code></td><td>错误渲染，添加 <code>.error</code> 类（红色边框 + 光晕）</td></tr></tbody></table></div>
+<h3 id="respacejs替换层">respace.js（替换层）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#respacejs替换层" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>函数</th><th>签名</th><th>说明</th></tr></thead><tbody><tr><td><code>replaceText</code></td><td><code>(regex, text, replacement) → string</code></td><td>处理 <code>\n</code> <code>\t</code> <code>\r</code> 转义后执行 <code>String.replace()</code></td></tr></tbody></table></div>
+<h3 id="resizerjs交互层--拖拽调整宽度">resizer.js（交互层 — 拖拽调整宽度）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#resizerjs交互层--拖拽调整宽度" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>变量/函数</th><th>说明</th></tr></thead><tbody><tr><td><code>isResizing</code> / <code>startX</code> / <code>startWidth</code></td><td>拖拽状态变量</td></tr><tr><td><code>MIN_WIDTH</code> = 20, <code>MAX_WIDTH</code> = 60</td><td>result-panel 百分比限幅</td></tr><tr><td><code>mousedown</code> on <code>#resizer</code></td><td><code>preventDefault()</code> + 记录起始值 + 计算 workspace 宽度</td></tr><tr><td><code>mousemove</code> on <code>document</code></td><td>计算新宽度百分比，限制范围，设置 <code>resultPanel.style.flex</code></td></tr><tr><td><code>mouseup</code> on <code>document</code></td><td>重置 isResizing</td></tr><tr><td><code>minfo.buttons === 0</code> 检测</td><td>鼠标按键已松开但事件未触发的兜底（解决窗口外松开问题）</td></tr></tbody></table></div>
+<h3 id="mainjs调度层">main.js（调度层）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mainjs调度层" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>函数</th><th>说明</th></tr></thead><tbody><tr><td><code>debounce(fn, delay=300)</code></td><td>通用防抖，返回闭包</td></tr><tr><td><code>handlePatternInput()</code></td><td>核心调度：取 pattern+flags+text → buildRegExp → runMatch → replaceText → renderResults</td></tr><tr><td><code>bindCopy(btn, textFn)</code></td><td>通用复制绑定：clipboard.writeText + “已复制!” 1.5s 反馈</td></tr><tr><td>sidebar toggle</td><td><code>classList.toggle('collapsed')</code></td></tr></tbody></table></div>
+<p><strong>复制按钮绑定：</strong></p>
+<ul>
+<li><code>#btn-copy-regex</code> → <code>inputPattern.value</code></li>
+<li><code>#btn-copy-replace</code> → <code>inputReplace.value</code></li>
+<li><code>#btn-copy-test</code> → <code>inputTest.value</code></li>
+<li><code>#btn-copy-result</code> → <code>replacePreviewText</code>（实时更新的变量）</li>
+</ul>
+<hr/>
+<h2 id="边界处理">边界处理<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#边界处理" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>场景</th><th>做法</th></tr></thead><tbody><tr><td>空 pattern 或空 text</td><td><code>renderResults([], '')</code> 显示 “无匹配结果”</td></tr><tr><td>非法正则</td><td><code>buildRegExp</code> 返回 <code>{error}</code> → <code>renderErrorResults</code> 红色边框 + 错误信息</td></tr><tr><td>替换文本含 <code>\n</code> <code>\t</code> <code>\r</code></td><td><code>respace.js</code> 先转义再替换</td></tr><tr><td>result-panel 宽度超限</td><td><code>resizer.js</code> 限制 20%–60%</td></tr><tr><td>拖拽时鼠标飞出窗口</td><td><code>minfo.buttons === 0</code> 兜底检测 + <code>preventDefault</code></td></tr><tr><td>sidebar 折叠</td><td><code>#saved-sidebar.collapsed</code> → width: 35px, padding: 0, 内容 hidden</td></tr><tr><td>快速连续点击复制</td><td><code>clearTimeout</code> + 重新计时，防止提示闪烁</td></tr></tbody></table></div>
+<hr/>
+<h2 id="预设模式5-个-已实现">预设模式（5 个）— 已实现<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#预设模式5-个-已实现" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>名称</th><th>正则</th><th style="text-align:center;">标志</th></tr></thead><tbody><tr><td>📧 邮箱</td><td><code>(?&lt;!\w)[\w.+-]+@[\w-]+\.[\w.]+(?!\w)</code></td><td style="text-align:center;">gi</td></tr><tr><td>📱 手机号</td><td><code>(?&lt;!\d)1[3-9]\d{9}(?!\d)</code></td><td style="text-align:center;">g</td></tr><tr><td>🌐 URL</td><td><code>(?&lt;![\w./-])https?://[\w./?=&amp;%-]+</code></td><td style="text-align:center;">gi</td></tr><tr><td>🪪 身份证</td><td><code>(?&lt;!\d)\d{17}[\dXx](?!\d)</code></td><td style="text-align:center;">g</td></tr><tr><td>💻 IP地址</td><td><code>(?&lt;!\d)((25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(25[0-5]|2[0-4]\d|1?\d?\d)(?!\d)</code></td><td style="text-align:center;">g</td></tr></tbody></table></div>
+<blockquote>
+<p>所有正则均使用<strong>零宽断言</strong>（lookbehind / lookahead）确保边界精确，避免匹配长数字串的子串。</p>
+</blockquote>
+<hr/>
+<h2 id="实现顺序-1">实现顺序<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#实现顺序-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>✅ HTML 骨架 + CSS 变量 + 布局</li>
+<li>✅ matcher.js（buildRegExp + runMatch）</li>
+<li>✅ render.js（结果卡片 + 错误渲染）</li>
+<li>✅ respace.js（replaceText 转义支持）</li>
+<li>✅ main.js（防抖 + 复制 + 折叠）</li>
+<li>✅ resizer.js（拖拽调整面板宽度）</li>
+<li>✅ storage.js（PRESETS 预设数据 + renderPresets） / ⬜ localStorage CRUD + renderSavedList</li>
+<li>⬜ 调试 + 移动端适配</li>
+<li>⬜ 工具箱入口卡片</li>
+</ol>
+<hr/>
+<h2 id="技术要点">技术要点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技术要点" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>防抖</strong>：闭包 + setTimeout/clearTimeout，300ms</li>
+<li><strong>matchAll</strong>：迭代器 <code>[…text.matchAll(regex)]</code> 转数组</li>
+<li><strong>flex vs width</strong>：拖拽用 <code>style.flex = '0 1 ' + N + '%'</code> 而非 <code>style.width</code>（flex-basis 优先级更高）</li>
+<li><strong><code>::after</code> 分割线</strong>：<code>.line</code> 5px 透明，<code>::after</code> 2px 可见线，<code>position: absolute</code> + <code>transform: translateX(-50%)</code> 居中</li>
+<li><strong>拖拽稳定性</strong>：<code>mousedown.preventDefault()</code> 阻止文本选中，<code>minfo.buttons === 0</code> 检测鼠标已松开</li>
+<li><strong>CSS 变量</strong>：统一深色主题色板，修改一处全局生效</li>
+<li><strong>错误态</strong>：<code>.error</code> 类添加 <code>box-shadow: inset</code> 红色边框 + <code>rgba</code> 光晕</li>
+<li><strong>零宽断言</strong>：(?&lt;!) 负向后看 + (?!`) 负向前看确保边界精确，避免误匹配长数字串子串</li>
+</ul>
+<hr/></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-207" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#正则实验室-regex-lab" data-for="正则实验室-regex-lab">正则实验室 (regex-lab)</a></li><li class="depth-1"><a href="#功能清单" data-for="功能清单">功能清单</a></li><li class="depth-2"><a href="#开发中" data-for="开发中">开发中</a></li><li class="depth-2"><a href="#待实现侧边栏底部按钮" data-for="待实现侧边栏底部按钮">待实现：侧边栏底部按钮</a></li><li class="depth-1"><a href="#已知问题" data-for="已知问题">已知问题</a></li><li class="depth-1"><a href="#文件结构" data-for="文件结构">文件结构</a></li><li class="depth-1"><a href="#css-设计系统" data-for="css-设计系统">CSS 设计系统</a></li><li class="depth-2"><a href="#css-变量basecss" data-for="css-变量basecss">CSS 变量（base.css）</a></li><li class="depth-2"><a href="#文件职责" data-for="文件职责">文件职责</a></li><li class="depth-1"><a href="#html-结构" data-for="html-结构">HTML 结构</a></li><li class="depth-1"><a href="#js-函数清单" data-for="js-函数清单">JS 函数清单</a></li><li class="depth-2"><a href="#storagejs数据层" data-for="storagejs数据层">storage.js（数据层）</a></li><li class="depth-2"><a href="#matcherjs运算层--纯逻辑" data-for="matcherjs运算层--纯逻辑">matcher.js（运算层 — 纯逻辑）</a></li><li class="depth-2"><a href="#renderjs渲染层--dom-操作" data-for="renderjs渲染层--dom-操作">render.js（渲染层 — DOM 操作）</a></li><li class="depth-2"><a href="#respacejs替换层" data-for="respacejs替换层">respace.js（替换层）</a></li><li class="depth-2"><a href="#resizerjs交互层--拖拽调整宽度" data-for="resizerjs交互层--拖拽调整宽度">resizer.js（交互层 — 拖拽调整宽度）</a></li><li class="depth-2"><a href="#mainjs调度层" data-for="mainjs调度层">main.js（调度层）</a></li><li class="depth-1"><a href="#边界处理" data-for="边界处理">边界处理</a></li><li class="depth-1"><a href="#预设模式5-个-已实现" data-for="预设模式5-个-已实现">预设模式（5 个）— 已实现</a></li><li class="depth-1"><a href="#实现顺序" data-for="实现顺序">实现顺序</a></li><li class="depth-1"><a href="#技术要点" data-for="技术要点">技术要点</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul><div class="article-stats" data-stats-endpoint="https://analytics.b-d.cc" data-article-id="GaotQMNN"><span class="article-like-prompt">如果觉得文章不错，点个赞吧</span><button class="article-like-button" type="button" aria-label="点赞" aria-pressed="false">赞</button></div><script type="module" src="/static/assets/article-stats.js"></script></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript.js" type="module" data-persist="true"></script></html>

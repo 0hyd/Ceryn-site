@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"1afafd1124979e04","type":"text","text":"## [[PCR]]","x":-140,"y":-60,"width":250,"height":60},
+		{"id":"fedcb121b46b8cd6","type":"text","text":"引物","x":260,"y":-60,"width":105,"height":60}
+	],
+	"edges":[
+		{"id":"60e8c4a3cd4e5d0a","fromNode":"1afafd1124979e04","fromSide":"right","toNode":"fedcb121b46b8cd6","toSide":"left"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-06-21",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

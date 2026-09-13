@@ -1,0 +1,36 @@
+{
+	"nodes":[
+		{"id":"6b891b871fd02846","type":"text","text":"## [[曲线运动]]","x":-125,"y":-30,"width":185,"height":60},
+		{"id":"4dcb5cd2b499eda8","type":"text","text":"### [[圆周运动]]","x":180,"y":-117,"width":250,"height":60},
+		{"id":"9f96e45393c8bcfe","type":"text","text":"### [[平抛运动]]","x":180,"y":-30,"width":250,"height":60},
+		{"id":"1b68c34d9745e270","type":"text","text":"### 斜抛运动","x":180,"y":60,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"8353dd9ba553ea9f","fromNode":"6b891b871fd02846","fromSide":"right","toNode":"4dcb5cd2b499eda8","toSide":"left"},
+		{"id":"3b590afd81546eae","fromNode":"6b891b871fd02846","fromSide":"right","toNode":"1b68c34d9745e270","toSide":"left"},
+		{
+			"id":"2edf2155b616b7b5",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"6b891b871fd02846",
+			"fromSide":"right",
+			"toNode":"9f96e45393c8bcfe",
+			"toSide":"left"
+		}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-07-03",
+			"lastmod":null,
+			"tags":["草稿"],
+			
+			"permalink":null,
+			"introduction":false,
+			"outline":false,
+			"lead-out":false,
+			"main body":false,
+			"key highlight":false
+		},
+		"version":"1.0-1.0"
+	}
+}

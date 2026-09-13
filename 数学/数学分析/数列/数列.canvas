@@ -1,0 +1,39 @@
+{
+	"nodes":[
+		{"id":"98b7fcbd59520afb","type":"group","x":-528,"y":109,"width":290,"height":340,"label":"单调性"},
+		{"id":"0fd1abec61cfb836","type":"group","x":300,"y":20,"width":290,"height":299,"label":"典型数列"},
+		{"id":"0fd2f99a9907eba8","type":"text","text":"## [[数列]]","x":12,"y":-224,"width":122,"height":60},
+		{"id":"7ba698e05c698cc9","type":"text","text":"离散函数","x":-133,"y":-458,"width":250,"height":58},
+		{"id":"2188787aa5540ddb","type":"text","text":"级数 $S_{n}$（前 n 项和）","x":-383,"y":-224,"width":250,"height":29},
+		{"id":"2e55a34bffb4203b","type":"text","text":"### 性质","x":-228,"y":-60,"width":116,"height":41},
+		{"id":"bbaa8d5288486088","type":"text","text":"可能有一个或多个通项公式\n\n有通向公式就一定有递推公式","x":-103,"y":103,"width":272,"height":77},
+		{"id":"08bf66d9c4ddefa8","type":"text","text":"递增数列","x":-508,"y":129,"width":250,"height":60},
+		{"id":"c7646bb050b33624","type":"text","text":"递减数列","x":-508,"y":209,"width":250,"height":60},
+		{"id":"3e7845ddf8dd9bb9","type":"text","text":"常数数列","x":-508,"y":289,"width":250,"height":60},
+		{"id":"8952d7bcf0236a59","type":"text","text":"摆动数列","x":-508,"y":369,"width":250,"height":60},
+		{"id":"44149202ac56c9a0","type":"text","text":"等差数列","x":320,"y":40,"width":250,"height":60},
+		{"id":"b23b5353873ee18a","type":"text","text":"数字组成的序列","x":357,"y":-208,"width":176,"height":29},
+		{"id":"943ff746b264ce58","type":"text","text":"等比数列","x":320,"y":129,"width":250,"height":60},
+		{"id":"583830c6e137f05f","type":"text","text":"斐波那契数列","x":320,"y":229,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"557a4f9e972f5c16","fromNode":"0fd2f99a9907eba8","fromSide":"right","toNode":"b23b5353873ee18a","toSide":"left","label":"定义"},
+		{"id":"f483346e670c536a","fromNode":"0fd2f99a9907eba8","fromSide":"left","toNode":"2188787aa5540ddb","toSide":"right"},
+		{"id":"4fd930b3e41b467a","fromNode":"0fd2f99a9907eba8","fromSide":"top","toNode":"7ba698e05c698cc9","toSide":"bottom"},
+		{"id":"0bcbb17d8be4be07","fromNode":"0fd2f99a9907eba8","fromSide":"bottom","toNode":"0fd1abec61cfb836","toSide":"top"},
+		{"id":"1cef58c31f6f4865","fromNode":"0fd2f99a9907eba8","fromSide":"bottom","toNode":"2e55a34bffb4203b","toSide":"top"},
+		{"id":"582762ef561b8d9d","fromNode":"2e55a34bffb4203b","fromSide":"bottom","toNode":"98b7fcbd59520afb","toSide":"top"},
+		{"id":"49fbb8bfcafa5b13","fromNode":"2e55a34bffb4203b","fromSide":"bottom","toNode":"bbaa8d5288486088","toSide":"top"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-09-09",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

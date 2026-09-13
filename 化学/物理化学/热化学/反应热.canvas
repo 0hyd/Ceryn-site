@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"6b72ca32e7bbca53","type":"text","text":"反应热","x":-125,"y":-30,"width":234,"height":60},
+		{"id":"7035570610d2cb95","type":"text","text":"[[比热容]]","x":-460,"y":30,"width":130,"height":60},
+		{"id":"90182664630a66f3","type":"text","text":"[[热量计]]","x":-375,"y":160,"width":250,"height":60},
+		{"id":"2ededf313feb5faa","type":"text","text":"[[焓]] H 焓变 $\\Delta H$","x":-16,"y":174,"width":250,"height":60},
+		{"id":"512e2d0d8d601a90","type":"text","text":"盖斯定律","x":310,"y":132,"width":130,"height":60},
+		{"id":"8b7c142cd2645a6e","type":"text","text":"分类","x":205,"y":-90,"width":105,"height":50},
+		{"id":"b33cc3c59e440e25","type":"text","text":"热化学方程","x":-16,"y":340,"width":250,"height":60},
+		{"id":"8b0476b12038e2a3","type":"text","text":"物质进行化学反应会出现热量的释放或吸收","x":-125,"y":-200,"width":250,"height":60},
+		{"id":"8f6c6727e8909bdf","type":"text","text":"内能","x":-450,"y":-140,"width":110,"height":60},
+		{"id":"ba206120f3e90cab","type":"text","text":"燃烧热","x":420,"y":-95,"width":112,"height":60}
+	],
+	"edges":[
+		{"id":"8fe677488d380769","fromNode":"8b0476b12038e2a3","fromSide":"bottom","toNode":"6b72ca32e7bbca53","toSide":"top","label":"标准化"},
+		{"id":"1e1631b3a7738f3b","fromNode":"8b0476b12038e2a3","fromSide":"left","toNode":"8f6c6727e8909bdf","toSide":"right","label":"具有"},
+		{"id":"4f1ae0de93a36c71","fromNode":"7035570610d2cb95","fromSide":"top","toNode":"8f6c6727e8909bdf","toSide":"bottom","label":"表示"},
+		{"id":"e9058a210c1df3af","fromNode":"8f6c6727e8909bdf","fromSide":"right","toNode":"6b72ca32e7bbca53","toSide":"left","label":"键断裂、形成\n内能改变"},
+		{"id":"a89896bca7da95cc","fromNode":"6b72ca32e7bbca53","fromSide":"bottom","toNode":"90182664630a66f3","toSide":"top","label":"直接测定"},
+		{"id":"e845de5295ff758e","fromNode":"2ededf313feb5faa","fromSide":"top","toNode":"6b72ca32e7bbca53","toSide":"bottom","label":" 表示"},
+		{"id":"4c0a0c612f9b7f3f","fromNode":"2ededf313feb5faa","fromSide":"bottom","toNode":"b33cc3c59e440e25","toSide":"top","label":"加入焓变"},
+		{"id":"bf7203f59ceefc3f","fromNode":"6b72ca32e7bbca53","fromSide":"right","toNode":"512e2d0d8d601a90","toSide":"left"},
+		{"id":"8874f826623fb7bd","fromNode":"6b72ca32e7bbca53","fromSide":"right","toNode":"8b7c142cd2645a6e","toSide":"left"},
+		{"id":"afe84643cfb1fd81","fromNode":"8b7c142cd2645a6e","fromSide":"right","toNode":"ba206120f3e90cab","toSide":"left"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-05-30",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

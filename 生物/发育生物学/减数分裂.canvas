@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"4f270e026a058a34","type":"text","text":"动物生殖细胞的分离过程","x":-300,"y":-140,"width":250,"height":60},
+		{"id":"737f4248648de467","type":"text","text":"为啥同源染色体可以配对形成四分体？","x":-50,"y":80,"width":350,"height":60},
+		{"id":"aed4c793ef6516fa","type":"text","text":"## [[减数分裂]]","x":-125,"y":-272,"width":250,"height":60}
+	],
+	"edges":[],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-06-19",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

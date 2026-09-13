@@ -1,0 +1,22 @@
+{
+	"edges":[
+		{"id":"8b6d8790d7ba8220","fromNode":"af72a3ff58a83a32","fromSide":"bottom","toNode":"bdf78e3350cbaf2b","toSide":"top"},
+		{"id":"1ba835f8d361cfb0","fromNode":"bdf78e3350cbaf2b","fromSide":"bottom","toNode":"37dd96e8ab102d4d","toSide":"top","label":"变换得"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-06-27",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	},
+	"nodes":[
+		{"id":"af72a3ff58a83a32","text":"## [[万有引力定律]]","type":"text","x":-125,"y":-30,"width":250,"height":60},
+		{"id":"bdf78e3350cbaf2b","text":"天体质量：\n$$\nm_{2}g=G \\frac{m_{1}m_{2}}{R^{2}}\n$$","type":"text","x":-487,"y":200,"width":247,"height":100},
+		{"id":"37dd96e8ab102d4d","text":"[[万有引力定律#^6c310e|黄金代换式]]","type":"text","x":-441,"y":400,"width":161,"height":60}
+	]
+}

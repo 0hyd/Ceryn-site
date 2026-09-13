@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Ceryn</title>
+      <link>https://localhost:8080</link>
+      <description>最近的10条笔记 on Ceryn</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Go Map</title>
+    <link>https://localhost:8080/Go/Go-Map</link>
+    <guid>https://localhost:8080/Go/Go-Map</guid>
+    <description><![CDATA[ 引入 切片用数字索引存取数据，但很多时候需要用名字、ID 这类自定义键来查找数据。Go 的 map 就是用来做这件事的，用键值对保存数据，通过键快速查找值。 正文 定义 定义 map 用键值对保存数据，通过键快速查找值。键类型必须是可比较的（数字、字符串、布尔、数组、结构体等），值类型不限。map 是引用类型，零值是 nil，未初始化的 map 不能写入。 语法 // 字面量创建 m := map[string]int{ &quot;语文&quot;: 90, &quot;数学&quot;: 95, } // make 创建 m := make(map[string]int) 例子 创建和赋值... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>Go channel</title>
+    <link>https://localhost:8080/Go/Go-channel</link>
+    <guid>https://localhost:8080/Go/Go-channel</guid>
+    <description><![CDATA[ 引入 goroutine 启动了，但多个 goroutine 之间怎么传递数据？共享变量加锁是一种办法，但 Go 更推荐用 channel——“不要通过共享内存来通信，而要通过通信来共享内存”。channel 就是 goroutine 之间传递数据的管道。 正文 定义 定义 channel 是 goroutine 之间传递数据的管道，用 chan 关键字声明。数据从一端发送，从另一端接收，天然支持并发安全。channel 分为无缓冲（同步通信）和有缓冲（异步通信）两种。 语法 // 声明无缓冲 channel ch := make(chan int) // 声明有缓冲 channel（容量为 ... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>Go defer</title>
+    <link>https://localhost:8080/Go/Go-defer</link>
+    <guid>https://localhost:8080/Go/Go-defer</guid>
+    <description><![CDATA[ 引入 打开文件要关、获取锁要释放、数据库连接要断开——这些”善后”操作如果忘了做，程序就会出问题。Go 的 defer 让你在执行操作的同时就把”善后”安排好，不管函数怎么返回，defer 的语句都会被执行。 正文 定义 定义 defer 语句延迟执行某个函数调用，被延迟的调用不会立即执行，而是在包含 defer 的函数返回之前按后进先出（LIFO）的顺序执行。常用于释放资源、关闭文件、解锁互斥量等善后操作。 语法 defer 函数调用() // 例子 defer file.Close() defer mu.Unlock() defer 后面跟一个函数调用，这个调用会在当前函数 return ... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>json 包</title>
+    <link>https://localhost:8080/Go/Go-encoding/json-%E5%8C%85</link>
+    <guid>https://localhost:8080/Go/Go-encoding/json-%E5%8C%85</guid>
+    <description><![CDATA[ 引入 http 包 处理 HTTP 请求时，数据交换最常用的格式就是 JSON。手动拼 JSON 字符串既容易出错又不优雅，Go 的 encoding/json 包让结构体和 JSON 之间的转换自动完成。 正文 定义 定义 encoding/json 包提供 JSON 编码和解码 功能。Marshal 把 Go 值序列化为 JSON 字节切片，Unmarshal 把 JSON 字节切片反序列化为 Go 值。通过结构体标签控制字段映射关系。 语法 import &quot;encoding/json&quot; // 编码：Go 值 → JSON data, err := json.Marsh... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>Go fmt 包</title>
+    <link>https://localhost:8080/Go/Go-fmt-%E5%8C%85</link>
+    <guid>https://localhost:8080/Go/Go-fmt-%E5%8C%85</guid>
+    <description><![CDATA[ 引入 写程序总要把结果输出到终端，或者从终端读取用户输入。Go 的 fmt 包就是干这件事的——格式化输入输出。不管是调试打印、日志输出还是读取用户输入，fmt 包都是用得最多的标准库之一。 正文 定义 定义 fmt 包提供格式化输入输出功能。输出函数把数据按指定格式打印到终端，输入函数从终端读取用户输入。格式化通过占位符（如 %d、%s）控制数据的显示方式。 语法 import &quot;fmt&quot; // 输出 fmt.Println(&quot;hello&quot;) // 打印并换行 fmt.Printf(&quot;age: %d\n&quot;, 20) // 格式化打印... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>Go io 包</title>
+    <link>https://localhost:8080/Go/Go-io-%E5%8C%85</link>
+    <guid>https://localhost:8080/Go/Go-io-%E5%8C%85</guid>
+    <description><![CDATA[ 引入 Go os 包 打开了文件，但怎么从文件里读数据、怎么把数据写到文件？Go 的答案是 io 包。io 包定义了两个最核心的接口——Reader 和 Writer，几乎所有 Go 的输入输出操作都围绕它们展开。理解了 io，就理解了 Go 处理数据流的方式。 正文 定义 定义 io 包定义了 Reader 和 Writer 接口，是 Go 流式数据处理的基石。Reader 负责从数据源读取字节，Writer 负责把字节写入目标。所有能读写数据的类型（文件、网络连接、内存缓冲区）都实现了这两个接口。 语法 import &quot;io&quot; // Reader 接口 type Rea... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>http 包</title>
+    <link>https://localhost:8080/Go/Go-net/http-%E5%8C%85</link>
+    <guid>https://localhost:8080/Go/Go-net/http-%E5%8C%85</guid>
+    <description><![CDATA[ 引入 Web 服务是当今应用的核心，Go 标准库自带的 net/http 包就能搭建 HTTP 服务器和客户端，不需要第三方框架。理解 net/http 包，就能用 Go 快速写出 REST API、爬虫、反向代理等网络应用。 正文 定义 定义 net/http 包提供 HTTP 服务器和客户端 功能。服务器端负责监听端口、接收请求、返回响应；客户端负责发起 HTTP 请求。内置路由匹配和中间件支持，是 Go Web 开发的基础。 语法 import &quot;net/http&quot; // 启动服务器 http.HandleFunc(&quot;/hello&quot;, func(w... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>Go os 包</title>
+    <link>https://localhost:8080/Go/Go-os-%E5%8C%85</link>
+    <guid>https://localhost:8080/Go/Go-os-%E5%8C%85</guid>
+    <description><![CDATA[ 引入 程序不是孤立运行的，它需要和操作系统打交道——读取环境变量获取配置、操作文件读写数据、解析命令行参数控制行为、异常时退出进程。os 包就是 Go 提供的操作系统交互层，屏蔽了不同平台的差异，提供统一的 API。 正文 定义 定义 os 包提供与操作系统交互的功能，包括环境变量读写、文件创建/打开/删除、命令行参数获取、进程退出等。它是 Go 程序访问系统资源的标准入口。 语法 import &quot;os&quot; // 环境变量 val := os.Getenv(&quot;HOME&quot;) os.Setenv(&quot;APP_PORT&quot;, &quot;8080... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>Go panic 和 recover</title>
+    <link>https://localhost:8080/Go/Go-panic-%E5%92%8C-recover</link>
+    <guid>https://localhost:8080/Go/Go-panic-%E5%92%8C-recover</guid>
+    <description><![CDATA[ 引入 程序有时会碰到完全无法处理的情况——数组越界、空指针、除零。Go 里这类严重问题会触发 panic，程序会立刻停止正常运行。但 Go 也提供了 recover 机制，让你在 defer 里把程序从崩溃边缘拉回来。 正文 定义 定义 panic 是 Go 的运行时错误机制，调用 panic() 后程序立即停止正常执行，开始执行所有 defer 语句，然后崩溃。recover() 只能在 defer 函数内调用，用于捕获 panic 并恢复程序的正常执行。 语法 // 触发 panic panic(&quot;出错了&quot;) // 在 defer 中恢复 defer func() { ... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>Go rune 和 byte</title>
+    <link>https://localhost:8080/Go/Go-rune-%E5%92%8C-byte</link>
+    <guid>https://localhost:8080/Go/Go-rune-%E5%92%8C-byte</guid>
+    <description><![CDATA[ 引入 字符串里提到 UTF-8 编码和 range 遍历拿到的是字符而不是字节。那单个字符在 Go 里到底是什么类型？答案是 rune 和 byte。rune 代表一个 Unicode 码点，byte 代表一个字节。搞清楚这两个类型的区别，才能正确处理中文、emoji 等多字节字符。 正文 定义 定义 rune 是 int32 的别名，代表一个 Unicode 码点（即一个字符）。byte 是 uint8 的别名，代表一个字节。字符串在内存中以 byte 序列存储（UTF-8 编码），但逻辑上由 rune 序列组成。 语法 // rune：单个字符（Unicode 码点） var r rune... ]]></description>
+    <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"aec91e8c56a2d5f2","type":"text","text":"","x":-125,"y":-30,"width":250,"height":50},
+		{"id":"a9f7f1d294c86f8a","type":"text","text":"半经典半量子”的模型\n\n经典物理学向量子力学奠基","x":0,"y":440,"width":256,"height":78},
+		{"id":"f00e3cdef9a559ab","type":"text","text":"轨道量子化","x":400,"y":-30,"width":144,"height":29},
+		{"id":"9ef13413c275526a","type":"text","text":"能量量子化","x":400,"y":220,"width":144,"height":29},
+		{"id":"489ab680b7ce0753","type":"text","text":"定态假设","x":400,"y":-280,"width":128,"height":29}
+	],
+	"edges":[
+		{"id":"6882c299fadf109d","fromNode":"aec91e8c56a2d5f2","fromSide":"bottom","toNode":"a9f7f1d294c86f8a","toSide":"top","label":"局限性"},
+		{"id":"b981135b3697784f","fromNode":"aec91e8c56a2d5f2","fromSide":"right","toNode":"489ab680b7ce0753","toSide":"left"},
+		{"id":"ec9f36c05091329b","fromNode":"aec91e8c56a2d5f2","fromSide":"right","toNode":"f00e3cdef9a559ab","toSide":"left"},
+		{"id":"924092f8ec053c3b","fromNode":"aec91e8c56a2d5f2","fromSide":"right","toNode":"9ef13413c275526a","toSide":"left"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-07-16",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

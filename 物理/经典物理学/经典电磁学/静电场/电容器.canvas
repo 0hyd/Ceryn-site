@@ -1,0 +1,31 @@
+{
+	"edges":[
+		{"id":"2fb2c0b670d99888","fromNode":"6f071f6a77d956c1","fromSide":"right","toNode":"658ebb232b697f94","toSide":"left","label":"种类"},
+		{"id":"62c7adfd9066bf06","fromNode":"6f071f6a77d956c1","fromSide":"left","toNode":"d8d902b71344d85f","toSide":"right","label":"性质"},
+		{"id":"7b8fa2ad92aa9f2b","fromNode":"d8d902b71344d85f","fromSide":"bottom","toNode":"871af0e45d2e2088","toSide":"top","label":"决定因素"},
+		{"id":"64399ecad6e674df","fromNode":"871af0e45d2e2088","fromSide":"right","toNode":"f1e52665a87a2ec7","toSide":"left","label":"S面积变化"},
+		{"id":"4dc628bfc0fbec69","fromNode":"6f071f6a77d956c1","fromSide":"right","toNode":"f1e52665a87a2ec7","toSide":"top","label":"种类"},
+		{"id":"8848fb6a8c40a774","fromNode":"d8d902b71344d85f","fromSide":"left","toNode":"76c58a7bf4e785c8","toSide":"right","label":"描述"},
+		{"id":"c537a454f1d29e56","fromNode":"871af0e45d2e2088","fromSide":"bottom","toNode":"0febf0bd684bc7f1","toSide":"top","label":"电介质"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-05-24",
+			"lastmod":"25-06-19",
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	},
+	"nodes":[
+		{"id":"6f071f6a77d956c1","text":"## [[电容器]]","type":"text","x":-125,"y":-30,"width":250,"height":70},
+		{"id":"d8d902b71344d85f","text":"[[电容]]","type":"text","x":-491,"y":155,"width":250,"height":60},
+		{"id":"871af0e45d2e2088","text":"$C=\\frac{\\varepsilon _rS}{4\\pi kd}$","type":"text","x":-491,"y":320,"width":250,"height":60},
+		{"id":"658ebb232b697f94","text":"固定电容器","type":"text","x":220,"y":-90,"width":250,"height":60},
+		{"id":"f1e52665a87a2ec7","text":"可变电容器","type":"text","x":95,"y":155,"width":250,"height":60},
+		{"id":"76c58a7bf4e785c8","text":"定义\n\n$C=\\frac{Q}{U}$\n","type":"text","x":-880,"y":143,"width":250,"height":85},
+		{"id":"0febf0bd684bc7f1","text":"$\\varepsilon_r$相对介电常数（化学？）","type":"text","x":-491,"y":490,"width":250,"height":70}
+	]
+}

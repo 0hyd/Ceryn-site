@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"d8047a7b17e7d9a5","type":"text","text":"## 振动","x":-125,"y":-30,"width":125,"height":50},
+		{"id":"050c7b40acc3905d","type":"text","text":"### [[简谐振动]]","x":-500,"y":-35,"width":250,"height":60},
+		{"id":"a62ffc49958444ac","type":"text","text":"#### [[阻尼振动]]","x":194,"y":-164,"width":250,"height":60},
+		{"id":"90d38e9e79241ffd","type":"text","text":"#### [[受迫振动]]","x":190,"y":-36,"width":250,"height":60},
+		{"id":"a72bf0e3e5d8bb61","type":"text","text":"#### [[共振]]","x":190,"y":100,"width":250,"height":60},
+		{"id":"ce4fec6a0fd1f7a5","type":"text","text":"定义：指一个物体相对于静止参照物或处于平衡状态的物体的往复运动","x":-187,"y":130,"width":250,"height":90},
+		{"id":"1f681f6e5a24be92","type":"text","text":"#清扫 该页面内容属于一个目录树，需要删除并修正为笔记","x":-277,"y":-356,"width":517,"height":56}
+	],
+	"edges":[
+		{"id":"304b953bc804a2f5","fromNode":"d8047a7b17e7d9a5","fromSide":"left","toNode":"050c7b40acc3905d","toSide":"right"},
+		{"id":"d2fe6f4f8e7432f0","fromNode":"d8047a7b17e7d9a5","fromSide":"right","toNode":"a62ffc49958444ac","toSide":"left"},
+		{"id":"4e8052418781e513","fromNode":"d8047a7b17e7d9a5","fromSide":"right","toNode":"90d38e9e79241ffd","toSide":"left"},
+		{"id":"72840e95de69ac01","fromNode":"d8047a7b17e7d9a5","fromSide":"right","toNode":"a72bf0e3e5d8bb61","toSide":"left"},
+		{"id":"e94f92e5c8753608","fromNode":"d8047a7b17e7d9a5","fromSide":"bottom","toNode":"ce4fec6a0fd1f7a5","toSide":"top"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-06-28",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"nodes":[
+		{"id":"2b6d002b71f670c7","type":"text","text":"## 欧几里得向量","x":-125,"y":-30,"width":165,"height":110},
+		{"id":"93ed9f89960ec868","type":"text","text":"##### 在笛卡尔坐标系的应用\n\n高中讲述[[空间向量.canvas|空间向量]]使用，但推广得：对于一个 n 维向量 $\\vec{a}=(a_{1},a_{2},a_{3},a_{4}\\dots)$**可以对应到n维欧几里得空间**","x":280,"y":-38,"width":480,"height":127},
+		{"id":"2e542939a1036cfd","type":"text","text":"### [[向量#点积|点积]]","x":-520,"y":267,"width":250,"height":60},
+		{"id":"9430f650112ba828","type":"text","text":"坐标表示","x":149,"y":258,"width":250,"height":60},
+		{"id":"f8488764249717e9","type":"text","text":"#### 基底","x":-167,"y":258,"width":250,"height":60},
+		{"id":"7ea8eb7dd6a1ce8d","type":"text","text":"表示的意义？只是物理上的功？","x":-520,"y":440,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"e78573323c4e5d03","fromNode":"2b6d002b71f670c7","fromSide":"bottom","toNode":"f8488764249717e9","toSide":"top"},
+		{"id":"425ae54dcb65c12b","fromNode":"2b6d002b71f670c7","fromSide":"right","toNode":"93ed9f89960ec868","toSide":"left","label":"几何应用"},
+		{"id":"4fefd6bced192dcf","fromNode":"2b6d002b71f670c7","fromSide":"bottom","toNode":"2e542939a1036cfd","toSide":"top"},
+		{"id":"4dc95ee6b2973896","fromNode":"2b6d002b71f670c7","fromSide":"bottom","toNode":"9430f650112ba828","toSide":"top"},
+		{"id":"be23ed844a6b3fda","fromNode":"2e542939a1036cfd","fromSide":"bottom","toNode":"7ea8eb7dd6a1ce8d","toSide":"top"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-06-25",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

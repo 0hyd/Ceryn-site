@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"d3c1ec33054571f6","type":"text","text":"## 全反射\n> [!info] 定义\n>  全内反射（英语：Total Internal Reflection），又称全反射，是一种光学现象。当入射角比**临界角**大时（光线远离法线），光线会停止进入另一界面，全部向内面反射","x":-200,"y":-120,"width":365,"height":299},
+		{"id":"5910ce337de1e8b1","x":380,"y":-43,"width":380,"height":145,"type":"text","text":"### [[临界角]]\n\n如果仅是从真空、空气入射，则 $n_{2}\\approx1$ ,有：$\\sin \\theta_{c}=\\sin \\frac{1}{n_{1}}$"}
+	],
+	"edges":[
+		{"id":"60475aa6eaaa01c4","fromNode":"d3c1ec33054571f6","fromSide":"right","toNode":"5910ce337de1e8b1","toSide":"left","label":"判断"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-06-22",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}

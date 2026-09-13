@@ -1,0 +1,38 @@
+{
+	"nodes":[
+		{"id":"c65984a1bba9eeff","type":"group","x":-160,"y":-140,"width":290,"height":420,"label":"分离、提纯"},
+		{"id":"4045845db0153ce4","type":"text","text":"重结晶","x":-140,"y":83,"width":250,"height":60},
+		{"id":"0475c2c155ab08c1","type":"text","text":"##### 色谱法 #生物","x":-140,"y":180,"width":250,"height":60},
+		{"id":"54fc1e41dc51a862","type":"text","text":"有机物","x":-140,"y":400,"width":250,"height":60},
+		{"id":"ec88c42d13608ae1","type":"text","text":"质谱法","x":-141,"y":600,"width":250,"height":60},
+		{"id":"9ff32e4374e18f20","type":"text","text":"燃烧法\n\n元素分析法 李比希","x":-500,"y":580,"width":250,"height":80},
+		{"id":"2f579384649a624e","type":"text","text":"红外光谱\n\n核磁共振氢谱\n\nX 射线衍射 #生物","x":200,"y":598,"width":250,"height":127},
+		{"id":"6db8616cbe439d26","type":"text","text":"萃取","x":-140,"y":-17,"width":250,"height":60},
+		{"id":"6e66af8335bab002","type":"text","text":"蒸馏","x":-140,"y":-120,"width":250,"height":60},
+		{"id":"782e5f768f71028c","type":"text","text":"## [[有机物研究方法]]","x":-159,"y":860,"width":286,"height":67}
+	],
+	"edges":[
+		{"id":"b00a610accc97b71","fromNode":"c65984a1bba9eeff","fromSide":"bottom","toNode":"54fc1e41dc51a862","toSide":"top","label":"得到"},
+		{"id":"58f733c94d4c8ead","fromNode":"54fc1e41dc51a862","fromSide":"bottom","toNode":"9ff32e4374e18f20","toSide":"top","label":"确定化学式"},
+		{"id":"e46cfadbe8681d07","fromNode":"54fc1e41dc51a862","fromSide":"bottom","toNode":"ec88c42d13608ae1","toSide":"top","label":"确定分子式"},
+		{"id":"e13c5d66b84660b0","fromNode":"54fc1e41dc51a862","fromSide":"bottom","toNode":"2f579384649a624e","toSide":"top","label":"确定分子结构"},
+		{"id":"e37af55541e7f693","fromNode":"782e5f768f71028c","fromSide":"top","toNode":"9ff32e4374e18f20","toSide":"bottom"},
+		{"id":"ed96f6db1d2f9748","fromNode":"782e5f768f71028c","fromSide":"top","toNode":"ec88c42d13608ae1","toSide":"bottom"},
+		{"id":"3e8e0018ef809df1","fromNode":"782e5f768f71028c","fromSide":"top","toNode":"2f579384649a624e","toSide":"bottom"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-07-09",
+			"lastmod":null,
+			"tags":[],
+			"dg-publish":false,
+			"permalink":null,
+			"introduction":false,
+			"outline":false,
+			"lead-out":false,
+			"main body":false,
+			"key highlight":false
+		},
+		"version":"1.0-1.0"
+	}
+}

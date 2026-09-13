@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "d1e333d67982ffed",
+      "x": 115,
+      "y": 60,
+      "width": 250,
+      "height": 60,
+      "type": "text",
+      "text": "引力相互作用"
+    },
+    {
+      "id": "6c952b58b2ab0d83",
+      "x": -400,
+      "y": 60,
+      "width": 250,
+      "height": 60,
+      "type": "text",
+      "text": " 电磁相互作用"
+    },
+    {
+      "id": "c47e0dd8e4f1e350",
+      "x": 115,
+      "y": 306,
+      "width": 250,
+      "height": 60,
+      "type": "text",
+      "text": " 弱相互作用"
+    },
+    {
+      "id": "7e2d5009f03cc1c6",
+      "x": -400,
+      "y": 306,
+      "width": 250,
+      "height": 60,
+      "type": "text",
+      "text": "强相互作用"
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "frontmatter": {
+      "date": "24-07-22",
+      "lastmod": null,
+      "tags": [],
+      "dg-publish": false,
+      "permalink": null,
+      "introduction": false,
+      "outline": false,
+      "lead-out": false,
+      "main body": false,
+      "key highlight": false
+    },
+    "version": "1.0-1.0"
+  }
+}

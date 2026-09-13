@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1200 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="background-color: white;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;">
+    <g transform="matrix(1.98347,0,0,2.17391,0,0)">
+        <g transform="matrix(1,0,0,0.886476,0,5.33563)">
+            <rect x="2.5" y="47" width="599" height="64" style="fill:url(#_Linear1);stroke:black;stroke-width:1px;"/>
+        </g>
+        <path d="M2.5,4L2.5,43M116.5,42.619L116.5,4M188.5,4L188.5,43M308.5,43L308.5,4M344.5,4L344.5,43M392.5,43L392.5,4M602.5,4L602.5,43" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1px;stroke-linejoin:miter;"/>
+    </g>
+    <g transform="matrix(1.98347,0,0,2.17391,0,0)">
+        <g transform="matrix(1,0,0,1,497.01,30.79)">
+            <text x="-10px" y="0px" style="font-family:'SimHei', monospace;font-size:20px;">红</text>
+        </g>
+        <g transform="matrix(1,0,0,1,368.47,30.68)">
+            <text x="-10px" y="0px" style="font-family:'SimHei', monospace;font-size:20px;">橙</text>
+        </g>
+        <g transform="matrix(1,0,0,1,321.28,30.79)">
+            <text x="-10px" y="0px" style="font-family:'SimHei', monospace;font-size:20px;">黄</text>
+        </g>
+        <g transform="matrix(1,0,0,1,248.74,30.68)">
+            <text x="-10px" y="0px" style="font-family:'SimHei', monospace;font-size:20px;">绿</text>
+        </g>
+        <g transform="matrix(1,0,0,1,152.16,30.79)">
+            <text x="-10px" y="0px" style="font-family:'SimHei', monospace;font-size:20px;">蓝</text>
+        </g>
+        <g transform="matrix(1,0,0,1,59.43,30.79)">
+            <text x="-10px" y="0px" style="font-family:'SimHei', monospace;font-size:20px;">紫</text>
+        </g>
+        <g transform="matrix(-3.82857e-16,-1,1,-3.82857e-16,0,0)">
+            <g transform="matrix(1,0,0,1,-23.41,13.09)">
+                <text x="-8.342px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;">380</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-23.39,112.77)">
+                <text x="-8.342px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;">450</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-23.42,184.77)">
+                <text x="-8.342px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;">495</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-23.43,304.77)">
+                <text x="-8.342px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;">570</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-23.43,340.77)">
+                <text x="-8.342px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;">590</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-23.47,388.77)">
+                <text x="-8.342px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;">620</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-23.48,598.77)">
+                <text x="-8.342px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;">750</text>
+            </g>
+        </g>
+        <g transform="matrix(0.171721,0,0,0.156678,190.115,75.5389)">
+            <text x="484.974px" y="236.182px" style="font-family:'SimHei', monospace;font-size:50px;">波长：</text>
+            <text x="634.974px" y="236.182px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;">nm</text>
+            <text x="718.324px" y="236.182px" style="font-family:'SimHei', monospace;font-size:50px;">纳米</text>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(599,0,0,599,2.5,47)"><stop offset="0" style="stop-color:rgb(2,0,5);stop-opacity:1"/><stop offset="0.05" style="stop-color:rgb(6,0,13);stop-opacity:1"/><stop offset="0.07" style="stop-color:rgb(8,1,16);stop-opacity:1"/><stop offset="0.08" style="stop-color:rgb(12,1,23);stop-opacity:1"/><stop offset="0.09" style="stop-color:rgb(17,2,31);stop-opacity:1"/><stop offset="0.11" style="stop-color:rgb(23,3,42);stop-opacity:1"/><stop offset="0.12" style="stop-color:rgb(31,5,58);stop-opacity:1"/><stop offset="0.14" style="stop-color:rgb(37,8,75);stop-opacity:1"/><stop offset="0.15" style="stop-color:rgb(41,10,92);stop-opacity:1"/><stop offset="0.16" style="stop-color:rgb(43,14,111);stop-opacity:1"/><stop offset="0.18" style="stop-color:rgb(41,19,128);stop-opacity:1"/><stop offset="0.19" style="stop-color:rgb(31,35,123);stop-opacity:1"/><stop offset="0.2" style="stop-color:rgb(19,46,116);stop-opacity:1"/><stop offset="0.22" style="stop-color:rgb(9,55,108);stop-opacity:1"/><stop offset="0.23" style="stop-color:rgb(10,62,102);stop-opacity:1"/><stop offset="0.24" style="stop-color:rgb(12,70,103);stop-opacity:1"/><stop offset="0.26" style="stop-color:rgb(14,79,106);stop-opacity:1"/><stop offset="0.28" style="stop-color:rgb(17,99,109);stop-opacity:1"/><stop offset="0.31" style="stop-color:rgb(23,121,112);stop-opacity:1"/><stop offset="0.32" style="stop-color:rgb(23,134,114);stop-opacity:1"/><stop offset="0.34" style="stop-color:rgb(26,149,116);stop-opacity:1"/><stop offset="0.35" style="stop-color:rgb(29,163,117);stop-opacity:1"/><stop offset="0.36" style="stop-color:rgb(29,178,115);stop-opacity:1"/><stop offset="0.38" style="stop-color:rgb(32,192,112);stop-opacity:1"/><stop offset="0.39" style="stop-color:rgb(34,203,107);stop-opacity:1"/><stop offset="0.41" style="stop-color:rgb(33,214,98);stop-opacity:1"/><stop offset="0.42" style="stop-color:rgb(35,224,84);stop-opacity:1"/><stop offset="0.43" style="stop-color:rgb(54,232,66);stop-opacity:1"/><stop offset="0.45" style="stop-color:rgb(80,237,40);stop-opacity:1"/><stop offset="0.46" style="stop-color:rgb(115,235,34);stop-opacity:1"/><stop offset="0.47" style="stop-color:rgb(143,231,34);stop-opacity:1"/><stop offset="0.49" style="stop-color:rgb(165,226,33);stop-opacity:1"/><stop offset="0.5" style="stop-color:rgb(185,220,34);stop-opacity:1"/><stop offset="0.51" style="stop-color:rgb(203,214,33);stop-opacity:1"/><stop offset="0.53" style="stop-color:rgb(220,206,32);stop-opacity:1"/><stop offset="0.54" style="stop-color:rgb(236,196,32);stop-opacity:1"/><stop offset="0.55" style="stop-color:rgb(242,183,53);stop-opacity:1"/><stop offset="0.57" style="stop-color:rgb(245,171,66);stop-opacity:1"/><stop offset="0.58" style="stop-color:rgb(246,159,73);stop-opacity:1"/><stop offset="0.59" style="stop-color:rgb(247,148,75);stop-opacity:1"/><stop offset="0.61" style="stop-color:rgb(249,136,72);stop-opacity:1"/><stop offset="0.62" style="stop-color:rgb(250,123,66);stop-opacity:1"/><stop offset="0.64" style="stop-color:rgb(251,108,57);stop-opacity:1"/><stop offset="0.65" style="stop-color:rgb(253,91,46);stop-opacity:1"/><stop offset="0.66" style="stop-color:rgb(252,71,31);stop-opacity:1"/><stop offset="0.68" style="stop-color:rgb(247,48,15);stop-opacity:1"/><stop offset="0.69" style="stop-color:rgb(234,34,13);stop-opacity:1"/><stop offset="0.7" style="stop-color:rgb(212,34,21);stop-opacity:1"/><stop offset="0.72" style="stop-color:rgb(191,35,24);stop-opacity:1"/><stop offset="0.73" style="stop-color:rgb(169,35,9);stop-opacity:1"/><stop offset="0.76" style="stop-color:rgb(135,27,6);stop-opacity:1"/><stop offset="0.78" style="stop-color:rgb(103,21,4);stop-opacity:1"/><stop offset="0.8" style="stop-color:rgb(89,19,3);stop-opacity:1"/><stop offset="0.81" style="stop-color:rgb(77,17,3);stop-opacity:1"/><stop offset="0.84" style="stop-color:rgb(55,12,1);stop-opacity:1"/><stop offset="0.85" style="stop-color:rgb(46,10,1);stop-opacity:1"/><stop offset="0.86" style="stop-color:rgb(39,8,1);stop-opacity:1"/><stop offset="0.88" style="stop-color:rgb(33,6,0);stop-opacity:1"/><stop offset="0.89" style="stop-color:rgb(30,4,0);stop-opacity:1"/><stop offset="0.97" style="stop-color:rgb(8,1,0);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(4,1,0);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>

@@ -1,0 +1,50 @@
+{
+	"nodes":[
+		{"id":"914e8cfb3f2edfb9","type":"text","text":"## 三角函数","x":-125,"y":-30,"width":185,"height":60},
+		{"id":"5b87b104c94c8880","type":"text","text":"#### [[余弦定理]]","x":240,"y":-150,"width":167,"height":60},
+		{"id":"9f81f679ed3a55c4","type":"text","text":"#### [[正弦定理]]","x":-500,"y":-150,"width":160,"height":60},
+		{"id":"71ef65a4d9336ccb","type":"text","text":"### [[三角恒等式]]","x":-157,"y":120,"width":250,"height":60},
+		{"id":"2447fa0ec8b6d030","type":"text","text":"[[三角函数的几何定义]]\n\n[[三角函数的复数定义]]","x":-157,"y":-320,"width":250,"height":100},
+		{"id":"0302a0d898765ed5","type":"text","text":"向量推导 #待完善 ","x":-532,"y":55,"width":250,"height":60},
+		{"id":"2fad1ac0cfa4b685","type":"text","text":"毕达哥拉斯恒等式","x":-340,"y":308,"width":250,"height":60},
+		{
+			"id":"b334e74cba357599",
+			"type":"text",
+			"text":"正弦函数",
+			"styleAttributes":{},
+			"x":160,
+			"y":160,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"37aacf1d11f1a7a5",
+			"type":"text",
+			"text":"余弦函数",
+			"styleAttributes":{},
+			"x":100,
+			"y":260,
+			"width":260,
+			"height":60
+		}
+	],
+	"edges":[
+		{"id":"4cb1c8b1021aa51d","toFloating":false,"fromNode":"914e8cfb3f2edfb9","fromSide":"top","toNode":"9f81f679ed3a55c4","toSide":"top","label":"外接圆半径"},
+		{"id":"927994e1961a43a9","fromNode":"914e8cfb3f2edfb9","fromSide":"top","toNode":"5b87b104c94c8880","toSide":"top"},
+		{"id":"1a6ca75066cd9cb6","fromNode":"914e8cfb3f2edfb9","fromSide":"top","toNode":"2447fa0ec8b6d030","toSide":"bottom"},
+		{"id":"e7a3f8f8dbdf46e8","fromNode":"914e8cfb3f2edfb9","fromSide":"bottom","toNode":"71ef65a4d9336ccb","toSide":"top"},
+		{"id":"acb8ade9431de53d","fromNode":"71ef65a4d9336ccb","fromSide":"bottom","toNode":"2fad1ac0cfa4b685","toSide":"top"},
+		{"id":"f3c10de0658ce4a7","fromNode":"0302a0d898765ed5","fromSide":"right","toNode":"914e8cfb3f2edfb9","toSide":"left"}
+	],
+	"metadata":{
+		"frontmatter":{
+			"date":"24-06-20",
+			"lastmod":null,
+			"tags":[],
+			"status":[],
+			"permalink":null,
+			"note-sections":[]
+		},
+		"version":"1.0-1.0"
+	}
+}
